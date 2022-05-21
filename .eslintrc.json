@@ -7,11 +7,9 @@
     "plugin:react/recommended",
     "airbnb",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "prettier/react",
-    "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
+
   "settings": {
     "import/resolver": {
       "typescript": {}
@@ -27,6 +25,27 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
+    "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/function-component-definition": "off",
+    "react/destructuring-assignment": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "react/jsx-no-bind": "off",
+    "react/require-default-props": "off",
+    "no-use-before-define": "off",
+    "no-useless-return": "off",
+    "no-console": "off",
+    "no-alert": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "consistent-return": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -35,10 +54,6 @@
         "tsx": "never"
       }
     ],
-    "no-shadow": "off",
-    "@typescript-eslint/no-shadow": ["error"],
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"],
-    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }]
+    "react/prop-types": "off"
   }
 }
