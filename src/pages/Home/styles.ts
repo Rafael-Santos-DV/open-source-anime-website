@@ -28,6 +28,7 @@ export const CalendarOfYear = styled.section`
   display: flex;
   flex-direction: column;
   row-gap: 60px;
+  padding-bottom: 70px;
 
   .container-animes .box-animes {
     grid-template-columns: repeat(4, 1fr);

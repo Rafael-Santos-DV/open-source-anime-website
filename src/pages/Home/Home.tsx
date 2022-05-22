@@ -6,6 +6,7 @@ import { Navigation } from '../../components/Navigation/Navigation';
 import { Search } from '../../components/Search/Search';
 import { ButtonLetter } from '../../components/ButtonLetter/ButtonLetter';
 import { CardAnimes } from '../../components/CardAnimes/CalendarCard';
+import { Footer } from '../../components/Footer/Footer';
 
 export const Home: React.FC = () => {
   return (
@@ -47,6 +48,7 @@ export const Home: React.FC = () => {
         <CardAnimes title="Calendário de 2022" />
         <CardAnimes title="Animes" className="container-animes" />
       </CalendarOfYear>
+      <Footer />
     </ContainerHome>
   );
 };
