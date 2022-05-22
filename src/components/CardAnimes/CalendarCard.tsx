@@ -27,31 +27,31 @@ export const CardAnimes: React.FC<TypeCardAnimes> = ({
       <BoxAnimes className="box-animes">
         <ComponentAnime
           type={type}
-          url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+          url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
         />
         <ComponentAnime
           type={type}
-          url="https://images7.alphacoders.com/303/thumbbig-303042.webp"
+          url="https://image.tmdb.org/t/p/original/jtBo40RgHzihmYYzzqkPOXyux8.jpg"
         />
         <ComponentAnime
           type={type}
-          url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+          url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
         />
         <ComponentAnime
           type={type}
-          url="https://images7.alphacoders.com/303/thumbbig-303042.webp"
+          url="https://image.tmdb.org/t/p/original/jtBo40RgHzihmYYzzqkPOXyux8.jpg"
         />
         <ComponentAnime
           type={type}
-          url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+          url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
         />
         <ComponentAnime
           type={type}
-          url="https://images7.alphacoders.com/303/thumbbig-303042.webp"
+          url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
         />
         <ComponentAnime
           type={type}
-          url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+          url="https://image.tmdb.org/t/p/original/jtBo40RgHzihmYYzzqkPOXyux8.jpg"
         />
       </BoxAnimes>
     </ContainerCalendar>

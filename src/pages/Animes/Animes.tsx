@@ -34,67 +34,67 @@ export const Animes: React.FC = () => {
           <ArticleAnime>
             <ComponentAnime
               type="animes"
-              url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
             />
             <ComponentAnime
               type="animes"
-              url="https://images7.alphacoders.com/303/thumbbig-303042.webp"
+              url="https://image.tmdb.org/t/p/original/jtBo40RgHzihmYYzzqkPOXyux8.jpg"
             />
             <ComponentAnime
               type="animes"
-              url="https://images7.alphacoders.com/303/thumbbig-303042.webp"
+              url="https://image.tmdb.org/t/p/original/xVqqHhoMRPDJbXXjIjr8uveRFIn.jpg"
             />
             <ComponentAnime
               type="animes"
-              url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
             />
             <ComponentAnime
               type="animes"
-              url="https://images7.alphacoders.com/303/thumbbig-303042.webp"
+              url="https://image.tmdb.org/t/p/original/lCPi4hXHjLQWv7j2TVsWoLE99Uw.jpg"
             />
             <ComponentAnime
               type="animes"
-              url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
             />
             <ComponentAnime
               type="animes"
-              url="https://images7.alphacoders.com/303/thumbbig-303042.webp"
+              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
             />
             <ComponentAnime
               type="animes"
-              url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
             />
             <ComponentAnime
               type="animes"
-              url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
             />
             <ComponentAnime
               type="animes"
-              url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
             />
             <ComponentAnime
               type="animes"
-              url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
             />
             <ComponentAnime
               type="animes"
-              url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
             />
             <ComponentAnime
               type="animes"
-              url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
             />
             <ComponentAnime
               type="animes"
-              url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
             />
             <ComponentAnime
               type="animes"
-              url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
             />
             <ComponentAnime
               type="animes"
-              url="https://images.alphacoders.com/605/thumbbig-605799.webp"
+              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
             />
           </ArticleAnime>
           <BoxNext>
