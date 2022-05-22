@@ -62,6 +62,7 @@ export const EffectPlay = styled.div<{ type: 'calendar' | 'animes' }>`
   align-items: center;
   justify-content: flex-end;
   display: none;
+  row-gap: 10px;
 
   ${(props) =>
     props.type === 'animes'
@@ -76,14 +77,16 @@ export const EffectPlay = styled.div<{ type: 'calendar' | 'animes' }>`
           }
 
           img.image-play {
-            width: 50px;
+            width: 40px;
             margin-top: 20px;
             animation: animation-show-image 200ms;
           }
         `
       : css`
+          justify-content: center;
+
           img.image-play {
-            width: 50px;
+            width: 40px;
             animation: animation-show-image 200ms;
           }
         `}
