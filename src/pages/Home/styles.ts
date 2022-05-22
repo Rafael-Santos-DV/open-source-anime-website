@@ -44,10 +44,6 @@ export const CalendarOfAnimes = styled.section`
 
     @media only screen and (max-width: 768px) {
       grid-template-columns: repeat(3, 1fr);
-
-      .background-image-anime {
-        height: 80px;
-      }
     }
     @media only screen and (max-width: 450px) {
       grid-template-columns: repeat(2, 1fr);
@@ -59,7 +55,8 @@ export const CalendarOfAnimes = styled.section`
       grid-template-columns: repeat(3, 1fr);
 
       .background-image-anime {
-        height: 60px;
+        height: auto;
+        max-height: 80px;
       }
 
       .content-info {

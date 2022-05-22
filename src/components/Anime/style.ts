@@ -16,8 +16,7 @@ export const Anime = styled.div`
 
   img {
     width: 100%;
-    height: auto;
-    /* margin-bottom: 10px; */
+    /* max-height: 200px; */
     transition: transform 500ms ease-out;
   }
 
@@ -60,8 +59,9 @@ export const EffectPlay = styled.div<{ type: 'calendar' | 'animes' }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   display: none;
+  row-gap: 10px;
 
   ${(props) =>
     props.type === 'animes'
@@ -72,28 +72,30 @@ export const EffectPlay = styled.div<{ type: 'calendar' | 'animes' }>`
             background-color: rgba(255, 255, 255, 0.3);
             border-radius: 5px;
             animation: animation-show 500ms;
-            margin-bottom: 10px;
+            transform: translateY(100%);
           }
 
           img.image-play {
-            width: 50px;
+            width: 40px;
             margin-top: 20px;
             animation: animation-show-image 200ms;
           }
         `
       : css`
+          justify-content: center;
+
           img.image-play {
-            width: 50px;
+            width: 40px;
             animation: animation-show-image 200ms;
           }
         `}
 
   @keyframes animation-show {
     0% {
-      transform: translateY(50%);
+      transform: translateY(-100%);
     }
     100% {
-      transform: translateY(0%);
+      transform: translateY(100%);
     }
   }
 
