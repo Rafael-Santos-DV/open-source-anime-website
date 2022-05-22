@@ -155,4 +155,25 @@ export const EffectPlay = styled.div<{ type: 'calendar' | 'animes' }>`
       width: 45px;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    row-gap: 10px;
+
+    img.image-play {
+      width: 30px;
+    }
+
+    span {
+      font-size: 2vw;
+    }
+
+    @keyframes animation-show-image {
+      0% {
+        width: 0px;
+      }
+      100% {
+        width: 30px;
+      }
+    }
+  }
 `;
