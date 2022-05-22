@@ -17,14 +17,20 @@ export const SectionFiltro = styled.section`
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 `;
 
 export const CalendarOfYear = styled.section`
   width: 100%;
   max-width: 1100px;
   padding: 10px;
-  border: 1px solid red;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  row-gap: 60px;
+
+  .container-animes .box-animes {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
 `;

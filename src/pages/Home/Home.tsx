@@ -5,6 +5,7 @@ import logo from '../../assets/logo.svg';
 import { Navigation } from '../../components/Navigation/Navigation';
 import { Search } from '../../components/Search/Search';
 import { ButtonLetter } from '../../components/ButtonLetter/ButtonLetter';
+import { CardAnimes } from '../../components/CardAnimes/CalendarCard';
 
 export const Home: React.FC = () => {
   return (
@@ -42,7 +43,10 @@ export const Home: React.FC = () => {
         <ButtonLetter>y</ButtonLetter>
         <ButtonLetter>z</ButtonLetter>
       </SectionFiltro>
-      <CalendarOfYear />
+      <CalendarOfYear>
+        <CardAnimes title="Calendário de 2022" />
+        <CardAnimes title="Animes" className="container-animes" />
+      </CalendarOfYear>
     </ContainerHome>
   );
 };
