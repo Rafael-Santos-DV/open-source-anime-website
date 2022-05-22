@@ -35,7 +35,7 @@ export const CardAnimes: React.FC<TypeCardAnimes> = ({
       </BoxTitle>
       <BoxAnimes className="box-animes">
         <Link to="/" className="box-anime-link">
-          <Anime>
+          <Anime className={` ${type === 'animes' ? 'animes-pad' : ''}`}>
             <EffectBackground>
               <img
                 src={imageTeste}
@@ -55,27 +55,7 @@ export const CardAnimes: React.FC<TypeCardAnimes> = ({
           </Anime>
         </Link>
         <Link to="/" className="box-anime-link">
-          <Anime>
-            <EffectBackground>
-              <img
-                src={imageTeste}
-                alt="teste"
-                className="background-image-anime"
-              />
-              <EffectPlay className="effect-play" type={type}>
-                <img src={play} alt="Ver anime" className="image-play" />
-                {type === 'animes' && <span>Ver anime</span>}
-              </EffectPlay>
-            </EffectBackground>
-
-            <div className="content-info">
-              <strong>Nome do animesssssssssaaaaaaaaaaaaaaaa..</strong>
-              <time>2022</time>
-            </div>
-          </Anime>
-        </Link>
-        <Link to="/" className="box-anime-link">
-          <Anime>
+          <Anime className={` ${type === 'animes' ? 'animes-pad' : ''}`}>
             <EffectBackground>
               <img
                 src={imageTeste}
@@ -95,7 +75,7 @@ export const CardAnimes: React.FC<TypeCardAnimes> = ({
           </Anime>
         </Link>
         <Link to="/" className="box-anime-link">
-          <Anime>
+          <Anime className={` ${type === 'animes' ? 'animes-pad' : ''}`}>
             <EffectBackground>
               <img
                 src={imageTeste}
@@ -115,7 +95,7 @@ export const CardAnimes: React.FC<TypeCardAnimes> = ({
           </Anime>
         </Link>
         <Link to="/" className="box-anime-link">
-          <Anime>
+          <Anime className={` ${type === 'animes' ? 'animes-pad' : ''}`}>
             <EffectBackground>
               <img
                 src={imageTeste}
@@ -135,7 +115,7 @@ export const CardAnimes: React.FC<TypeCardAnimes> = ({
           </Anime>
         </Link>
         <Link to="/" className="box-anime-link">
-          <Anime>
+          <Anime className={` ${type === 'animes' ? 'animes-pad' : ''}`}>
             <EffectBackground>
               <img
                 src={imageTeste}
@@ -155,7 +135,27 @@ export const CardAnimes: React.FC<TypeCardAnimes> = ({
           </Anime>
         </Link>
         <Link to="/" className="box-anime-link">
-          <Anime>
+          <Anime className={` ${type === 'animes' ? 'animes-pad' : ''}`}>
+            <EffectBackground>
+              <img
+                src={imageTeste}
+                alt="teste"
+                className="background-image-anime"
+              />
+              <EffectPlay className="effect-play" type={type}>
+                <img src={play} alt="Ver anime" className="image-play" />
+                {type === 'animes' && <span>Ver anime</span>}
+              </EffectPlay>
+            </EffectBackground>
+
+            <div className="content-info">
+              <strong>Nome do anime</strong>
+              <time>2022</time>
+            </div>
+          </Anime>
+        </Link>
+        <Link to="/" className="box-anime-link">
+          <Anime className={` ${type === 'animes' ? 'animes-pad' : ''}`}>
             <EffectBackground>
               <img
                 src={imageTeste}

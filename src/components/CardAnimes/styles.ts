@@ -69,6 +69,10 @@ export const Anime = styled.div`
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.3);
 
+  &.animes-pad {
+    padding: 0;
+  }
+
   img {
     width: 100%;
     height: 150px;

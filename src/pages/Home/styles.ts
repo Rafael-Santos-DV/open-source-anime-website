@@ -49,6 +49,9 @@ export const CalendarOfAnimes = styled.section`
         height: 80px;
       }
     }
+    @media only screen and (max-width: 450px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .container-calendar .box-animes {
