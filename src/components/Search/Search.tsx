@@ -4,7 +4,7 @@ import imageLupa from '../../assets/magnifier.svg';
 
 export const Search: React.FC = () => {
   return (
-    <ContainerSearch>
+    <ContainerSearch id="search">
       <Box>
         <input type="text" placeholder="Pesquisar..." />
         <img src={imageLupa} alt="Pesquisar" />

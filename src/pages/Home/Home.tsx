@@ -12,8 +12,8 @@ export const Home: React.FC = () => {
   return (
     <ContainerHome>
       <Header>
-        <img src={logo} alt="LF AnimesFlix" />
-        <Navigation />
+        <img src={logo} alt="LF AnimesFlix" id="logo-master" />
+        <Navigation navHeader />
         <Search />
       </Header>
       <span className="line" />
@@ -45,7 +45,11 @@ export const Home: React.FC = () => {
         <ButtonLetter>z</ButtonLetter>
       </SectionFiltro>
       <CalendarOfAnimes>
-        <CardAnimes title="Calendário de 2022" type="calendar" />
+        <CardAnimes
+          title="Calendário de 2022"
+          type="calendar"
+          className="container-calendar"
+        />
         <CardAnimes title="Animes" className="container-animes" type="animes" />
       </CalendarOfAnimes>
       <Footer />

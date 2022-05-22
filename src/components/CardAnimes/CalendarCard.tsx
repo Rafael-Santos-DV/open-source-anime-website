@@ -69,7 +69,7 @@ export const CardAnimes: React.FC<TypeCardAnimes> = ({
             </EffectBackground>
 
             <div className="content-info">
-              <strong>Nome do anime</strong>
+              <strong>Nome do animesssssssssaaaaaaaaaaaaaaaa..</strong>
               <time>2022</time>
             </div>
           </Anime>

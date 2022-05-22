@@ -8,6 +8,13 @@ export const ContainerHome = styled.div`
     background: ${colors.colorBlue};
     display: block;
   }
+
+  #logo-master {
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
 `;
 
 export const SectionFiltro = styled.section`
@@ -18,6 +25,7 @@ export const SectionFiltro = styled.section`
   gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 40px;
+  padding: 0 20px;
 `;
 
 export const CalendarOfAnimes = styled.section`
@@ -33,5 +41,30 @@ export const CalendarOfAnimes = styled.section`
   .container-animes .box-animes {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+
+      .background-image-anime {
+        height: 80px;
+      }
+    }
+  }
+
+  .container-calendar .box-animes {
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+
+      .background-image-anime {
+        height: 60px;
+      }
+
+      .content-info {
+        strong,
+        time {
+          font-size: 2.8vw;
+        }
+      }
+    }
   }
 `;

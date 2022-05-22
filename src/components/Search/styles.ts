@@ -22,6 +22,7 @@ export const Box = styled.div`
     padding: 10px;
     background-color: transparent;
     border: none;
+    width: 100%;
 
     &::placeholder {
       color: #fff;
@@ -32,5 +33,13 @@ export const Box = styled.div`
   img {
     width: 30px;
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 568px) {
+    input {
+      &::placeholder {
+        font-size: 4.5vw;
+      }
+    }
   }
 `;

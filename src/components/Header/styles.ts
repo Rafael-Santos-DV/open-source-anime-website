@@ -31,4 +31,18 @@ export const HeaderStyle = styled.header<HeaderType>`
   img {
     z-index: 1;
   }
+
+  @media only screen and (max-width: 768px) {
+    #logo-master {
+      order: 2;
+    }
+    .navigation {
+      order: 1;
+      flex-direction: column;
+    }
+
+    #search {
+      order: 3;
+    }
+  }
 `;

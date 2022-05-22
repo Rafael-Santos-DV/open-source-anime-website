@@ -15,4 +15,8 @@ export const Button = styled.button`
   &:hover {
     filter: brightness(0.5);
   }
+
+  @media only screen and (max-width: 768px) {
+    padding: 7px;
+  }
 `;

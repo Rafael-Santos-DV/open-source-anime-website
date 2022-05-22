@@ -28,6 +28,10 @@ export const FooterContainer = styled.footer`
     border-top: 1px solid #fff;
     margin-top: 100px;
   }
+
+  @media only screen and (max-width: 768px) {
+    padding-top: 80px;
+  }
 `;
 
 export const BoxContent = styled.div`
@@ -36,6 +40,13 @@ export const BoxContent = styled.div`
   img {
     z-index: 1;
     width: 200px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 40px;
   }
 `;
 export const BoxSocialNetwork = styled.div`
@@ -52,5 +63,10 @@ export const BoxSocialNetwork = styled.div`
     img {
       width: 30px;
     }
+  }
+
+  @media only screen and (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 `;

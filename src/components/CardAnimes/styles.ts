@@ -66,7 +66,8 @@ export const Anime = styled.div`
   color: #ffffff;
   row-gap: 5px;
   border-bottom: 4px solid ${colors.colorBlue};
-  padding-bottom: 4px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
 
   img {
     width: 100%;
@@ -76,15 +77,22 @@ export const Anime = styled.div`
   }
 
   div.content-info {
+    width: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 5px;
     padding-left: 5px;
     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    max-width: 140px;
 
     strong,
     time {
       font-size: 14px;
+      display: block;
     }
 
     time {
