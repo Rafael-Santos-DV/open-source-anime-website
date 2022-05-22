@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from '../../components/Header/Header';
-import { CalendarOfYear, ContainerHome, SectionFiltro } from './styles';
+import { CalendarOfAnimes, ContainerHome, SectionFiltro } from './styles';
 import logo from '../../assets/logo.svg';
 import { Navigation } from '../../components/Navigation/Navigation';
 import { Search } from '../../components/Search/Search';
@@ -44,10 +44,10 @@ export const Home: React.FC = () => {
         <ButtonLetter>y</ButtonLetter>
         <ButtonLetter>z</ButtonLetter>
       </SectionFiltro>
-      <CalendarOfYear>
-        <CardAnimes title="Calendário de 2022" />
-        <CardAnimes title="Animes" className="container-animes" />
-      </CalendarOfYear>
+      <CalendarOfAnimes>
+        <CardAnimes title="Calendário de 2022" type="calendar" />
+        <CardAnimes title="Animes" className="container-animes" type="animes" />
+      </CalendarOfAnimes>
       <Footer />
     </ContainerHome>
   );

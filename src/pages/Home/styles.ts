@@ -20,7 +20,7 @@ export const SectionFiltro = styled.section`
   margin-bottom: 40px;
 `;
 
-export const CalendarOfYear = styled.section`
+export const CalendarOfAnimes = styled.section`
   width: 100%;
   max-width: 1100px;
   padding: 10px;

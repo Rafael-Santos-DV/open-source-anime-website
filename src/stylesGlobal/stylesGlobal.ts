@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     outline: none;
     font-family: 'Lobster', cursive;
+    text-decoration: none;
   }
 
   html, body, #root{
