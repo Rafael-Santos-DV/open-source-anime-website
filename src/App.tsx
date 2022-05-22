@@ -1,7 +1,17 @@
-import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { GlobalContext } from './context/context';
+import { Home } from './pages/Home/Home';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <GlobalContext>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </GlobalContext>
+  );
 }
 
 export default App;
