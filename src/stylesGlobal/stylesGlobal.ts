@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
     outline: none;
     font-family: 'Lobster', cursive;
     text-decoration: none;
+    list-style: none;
   }
 
   html, body, #root{
