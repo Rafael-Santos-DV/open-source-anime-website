@@ -18,14 +18,6 @@ export const HeaderStyle = styled.header<HeaderType>`
   row-gap: 55px;
   position: relative;
 
-  @media only screen and (max-width: 1000px) {
-    padding-bottom: 200px;
-  }
-
-  @media only screen and (max-width: 768px) {
-    padding-bottom: 140px;
-  }
-
   &::before {
     content: '';
     position: absolute;

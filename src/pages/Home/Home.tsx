@@ -11,7 +11,7 @@ import { Footer } from '../../components/Footer/Footer';
 export const Home: React.FC = () => {
   return (
     <ContainerHome>
-      <Header>
+      <Header className="header-position">
         <img src={logo} alt="LF AnimesFlix" id="logo-master" />
         <Navigation navHeader isHome />
         <Search />
