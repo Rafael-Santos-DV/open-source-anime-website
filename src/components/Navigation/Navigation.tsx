@@ -6,12 +6,14 @@ import movie from '../../assets/movie.svg';
 import foursquares from '../../assets/foursquares.svg';
 import buttonHamburger from '../../assets/button-hamb.svg';
 import buttonX from '../../assets/button-x.svg';
+import { Search } from '../Search/Search';
 
 type NavType = {
   navHeader: boolean;
+  isHome: boolean;
 };
 
-export const Navigation: React.FC<NavType> = ({ navHeader }) => {
+export const Navigation: React.FC<NavType> = ({ navHeader, isHome }) => {
   const [active, setActive] = useState(false);
 
   const handleActiveMobile = () => {
@@ -26,6 +28,7 @@ export const Navigation: React.FC<NavType> = ({ navHeader }) => {
           {active && <img src={buttonX} alt="Menu" />}
         </MenuMobile>
       )}
+
       <div className={`links ${navHeader ? 'mobile-active' : ''}`}>
         <Link to="/" onClick={handleActiveMobile}>
           <img src={home} alt="Home" />
@@ -35,10 +38,11 @@ export const Navigation: React.FC<NavType> = ({ navHeader }) => {
           <img src={movie} alt="Animes" />
           <span>Animes</span>
         </Link>
-        <Link to="/" onClick={handleActiveMobile}>
+        <Link to="/episodios" onClick={handleActiveMobile}>
           <img src={foursquares} alt="Episódios" />
           <span>Episódios</span>
         </Link>
+        {navHeader && !isHome && <Search />}
       </div>
     </Nav>
   );

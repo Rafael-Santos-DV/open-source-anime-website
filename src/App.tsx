@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { GlobalContext } from './context/context';
 import { Animes } from './pages/Animes/Animes';
+import { Episodes } from './pages/Episodes/Espisodes';
 import { Home } from './pages/Home/Home';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/animes" element={<Animes />} />
+          <Route path="/episodios" element={<Episodes />} />
         </Routes>
       </BrowserRouter>
     </GlobalContext>

@@ -12,8 +12,9 @@ export const SectionAllAnimes = styled.section`
   display: grid;
   grid-template-columns: 2fr 1fr;
   position: relative;
-  top: -200px;
+  top: -300px;
   gap: 10px;
+  padding: 5px;
 
   @media only screen and (max-width: 1000px) {
     grid-template-columns: 1fr;

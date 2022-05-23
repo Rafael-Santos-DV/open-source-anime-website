@@ -4,8 +4,16 @@ import { HeaderStyle } from './styles';
 
 type HeaderType = {
   children: ReactNode;
+  className?: string;
 };
 
-export const Header: React.FC<HeaderType> = ({ children }) => {
-  return <HeaderStyle url={backgroundHeader}>{children}</HeaderStyle>;
+export const Header: React.FC<HeaderType> = ({ children, className }) => {
+  return (
+    <HeaderStyle
+      className={`header-mobile ${className || ''}`}
+      url={backgroundHeader}
+    >
+      {children}
+    </HeaderStyle>
+  );
 };

@@ -15,6 +15,13 @@ export const ContainerHome = styled.div`
       max-width: 200px;
     }
   }
+
+  .header-position {
+    @media only screen and (min-width: 761px) {
+      padding-bottom: 200px;
+    }
+    padding-bottom: 200px;
+  }
 `;
 
 export const SectionFiltro = styled.section`
