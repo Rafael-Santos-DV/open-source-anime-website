@@ -9,14 +9,22 @@ export const HeaderStyle = styled.header<HeaderType>`
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -80px;
+  /* background-position-y: -80px; */
   display: flex;
   justify-content: space-around;
-  padding: 20px 10px 200px 10px;
+  padding: 20px 30px 400px 10px;
 
   flex-wrap: wrap;
   row-gap: 55px;
   position: relative;
+
+  @media only screen and (max-width: 1000px) {
+    padding-bottom: 200px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding-bottom: 140px;
+  }
 
   &::before {
     content: '';

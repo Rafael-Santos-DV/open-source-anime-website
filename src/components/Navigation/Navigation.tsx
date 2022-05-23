@@ -38,7 +38,7 @@ export const Navigation: React.FC<NavType> = ({ navHeader, isHome }) => {
           <img src={movie} alt="Animes" />
           <span>Animes</span>
         </Link>
-        <Link to="/" onClick={handleActiveMobile}>
+        <Link to="/episodios" onClick={handleActiveMobile}>
           <img src={foursquares} alt="Episódios" />
           <span>Episódios</span>
         </Link>
