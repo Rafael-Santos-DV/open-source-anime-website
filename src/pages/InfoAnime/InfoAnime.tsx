@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '../../components/Header/Header';
 import { Navigation } from '../../components/Navigation/Navigation';
-import { Container } from './style';
+import { Container, SectionEpisodes } from './style';
 import logo from '../../assets/logo.svg';
 import { InformationAnime } from '../../components/InformationAnime/InformationAnime';
 
@@ -14,6 +14,7 @@ export const InfoAnime: React.FC = () => {
         <InformationAnime />
       </Header>
       <span className="line-blue" />
+      <SectionEpisodes />
     </Container>
   );
 };

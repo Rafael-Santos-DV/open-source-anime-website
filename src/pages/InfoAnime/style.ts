@@ -25,3 +25,5 @@ export const Container = styled.div`
     border-bottom: 5px solid ${colors.colorBlue};
   }
 `;
+
+export const SectionEpisodes = styled.section``;
