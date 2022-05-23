@@ -7,5 +7,9 @@ type HeaderType = {
 };
 
 export const Header: React.FC<HeaderType> = ({ children }) => {
-  return <HeaderStyle url={backgroundHeader}>{children}</HeaderStyle>;
+  return (
+    <HeaderStyle className="header-mobile" url={backgroundHeader}>
+      {children}
+    </HeaderStyle>
+  );
 };

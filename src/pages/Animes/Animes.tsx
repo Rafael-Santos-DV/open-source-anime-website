@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '../../components/Header/Header';
 import { Navigation } from '../../components/Navigation/Navigation';
-import { Search } from '../../components/Search/Search';
+
 import {
   ArticleAnime,
   BoxNext,
@@ -22,8 +22,7 @@ export const Animes: React.FC = () => {
     <ContainerAnimes>
       <Header>
         <img src={logo} alt="LF AnimesFlix" id="logo-master" />
-        <Navigation navHeader />
-        <Search />
+        <Navigation navHeader isHome={false} />
       </Header>
       <SectionAllAnimes>
         <MainContent>

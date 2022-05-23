@@ -13,7 +13,7 @@ export const Home: React.FC = () => {
     <ContainerHome>
       <Header>
         <img src={logo} alt="LF AnimesFlix" id="logo-master" />
-        <Navigation navHeader />
+        <Navigation navHeader isHome />
         <Search />
       </Header>
       <span className="line" />

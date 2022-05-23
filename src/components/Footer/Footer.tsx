@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
     <FooterContainer>
       <BoxContent>
         <img src={logo} alt="LF AnimesFlix" />
-        <Navigation navHeader={false} />
+        <Navigation navHeader={false} isHome={false} />
         <BoxSocialNetwork>
           <a href="http://">
             <img src={youtube} alt="Youtube" />
