@@ -17,6 +17,9 @@ export const ContainerInformation = styled.article`
     grid-row: 1 / span 2;
   }
 
+  @media only screen and (max-width: 778px) {
+    order: 2;
+  }
   @media only screen and (max-width: 648px) {
     grid-template-columns: repeat(3, 1fr);
 
@@ -58,6 +61,7 @@ export const Gender = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    align-items: center;
   }
 
   @media only screen and (max-width: 748px) {
@@ -73,6 +77,7 @@ export const TypeAnime = styled.div`
   div {
     display: flex;
     gap: 5px;
+    align-items: center;
   }
   @media only screen and (max-width: 748px) {
     font-size: 3.4vw;

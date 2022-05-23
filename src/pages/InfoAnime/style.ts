@@ -10,6 +10,11 @@ export const Container = styled.div`
     @media only screen and (max-width: 648px) {
       padding-left: 15px;
       padding-right: 15px;
+
+      img#logo-master {
+        width: 100%;
+        max-width: 250px;
+      }
     }
   }
 
