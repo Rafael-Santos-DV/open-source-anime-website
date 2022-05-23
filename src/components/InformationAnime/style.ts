@@ -77,6 +77,10 @@ export const TypeAnime = styled.div`
   @media only screen and (max-width: 748px) {
     font-size: 3.4vw;
   }
+
+  span.epi {
+    color: ${colors.colorBlue};
+  }
 `;
 
 export const Content = styled.article`
@@ -92,6 +96,10 @@ export const Content = styled.article`
   @media only screen and (max-width: 648px) {
     grid-row: 4;
     grid-column: 1 / span 5;
+
+    p {
+      font-size: 4vw;
+    }
   }
 
   @media only screen and (max-width: 420px) {

@@ -37,7 +37,7 @@ export const InformationAnime: React.FC = () => {
               <time>2022</time>
             </div>
             <div>
-              <span>12</span>
+              <span className="epi">12</span>
               <strong>Episódios</strong>
             </div>
             <div>

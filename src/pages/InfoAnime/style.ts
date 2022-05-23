@@ -6,6 +6,11 @@ export const Container = styled.div`
 
   header.info-anime {
     padding-bottom: 0;
+
+    @media only screen and (max-width: 648px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   span.line-blue {
