@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../colors/colors';
 
-export const Button = styled.button`
+export const ButtonComponent = styled.button`
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   color: ${colors.colorGreen};

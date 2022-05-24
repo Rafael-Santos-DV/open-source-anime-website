@@ -7,6 +7,20 @@ export const Container = styled.div`
   header.info-anime {
     padding-bottom: 0;
 
+    @media only screen and (min-width: 1200px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      > img {
+        margin: 0 auto;
+      }
+
+      & article.box-article {
+        grid-column: 1 / span 2;
+        margin: 0 auto;
+      }
+    }
+
     @media only screen and (max-width: 648px) {
       padding-left: 15px;
       padding-right: 15px;
@@ -14,6 +28,14 @@ export const Container = styled.div`
       img#logo-master {
         width: 100%;
         max-width: 250px;
+      }
+    }
+
+    article.box-article {
+      gap: 5px;
+
+      img.poster-info {
+        padding-bottom: 10px;
       }
     }
   }

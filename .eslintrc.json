@@ -35,6 +35,12 @@
     "react/require-default-props": "off",
     "no-use-before-define": "off",
     "no-useless-return": "off",
+    "jsx-a11y/media-has-caption": [
+      "off",
+      {
+        "video": ["video"]
+      }
+    ],
     "no-console": "off",
     "no-alert": "off",
     "prettier/prettier": [
