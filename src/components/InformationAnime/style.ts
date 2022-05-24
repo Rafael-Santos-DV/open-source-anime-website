@@ -104,6 +104,7 @@ export const Content = styled.article`
 
     p {
       font-size: 4vw;
+      padding-bottom: 15px;
     }
   }
 

@@ -4,7 +4,7 @@ export const Nav = styled.nav<{ activeLinks: boolean }>`
   z-index: 1;
 
   &.mb {
-    padding-left: 20px;
+    padding-left: 5px;
   }
 
   .menu-mobile {

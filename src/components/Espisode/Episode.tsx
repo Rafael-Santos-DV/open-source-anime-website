@@ -39,7 +39,7 @@ export const EpisodeComponent: React.FC<EpType> = ({ animeName }) => {
     }
   }, []);
   return (
-    <ContainerEpisode>
+    <ContainerEpisode className="episode">
       <Link to="/" className="content">
         <ContentImage>
           <img

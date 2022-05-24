@@ -26,4 +26,35 @@ export const Container = styled.div`
   }
 `;
 
-export const SectionEpisodes = styled.section``;
+export const SectionEpisodes = styled.section`
+  max-width: 1100px;
+  margin: 0 auto;
+
+  > h1 {
+    color: ${colors.colorBlue};
+    padding: 10px 10px 30px 10px;
+    font-size: 2.2rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    > h1 {
+      font-size: 5.5vw;
+    }
+  }
+`;
+
+export const MainOfAnime = styled.main`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media only screen and (max-width: 500px) {
+    footer div.content-play {
+      display: none;
+    }
+  }
+`;
