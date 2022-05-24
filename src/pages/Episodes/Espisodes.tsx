@@ -16,26 +16,13 @@ export const Episodes: React.FC = () => {
       <MainContent>
         <h1>Episódios</h1>
         <SectionEpisodes>
-          <EpisodeComponent animeName="Dragon ball super o melhor anime de todos aqui em petropolis aaaaaaaaaaaaa" />
-          <EpisodeComponent animeName="Dragon ball Z é um anime de todos, mas nem todos soa par ele" />
-          <EpisodeComponent animeName="Dragon ball super o melhor anime de todos aqui em petropolis aaaaaaaaaaaaa" />
-          <EpisodeComponent animeName="Dragon ball Z é um anime de todos, mas nem todos soa par ele" />
-          <EpisodeComponent animeName="Dragon ball super o melhor anime de todos aqui em petropolis aaaaaaaaaaaaa" />
-          <EpisodeComponent animeName="Dragon ball Z é um anime de todos, mas nem todos soa par ele" />
-          <EpisodeComponent animeName="Dragon ball super o melhor anime de todos aqui em petropolis aaaaaaaaaaaaa" />
-          <EpisodeComponent animeName="Dragon ball Z é um anime de todos, mas nem todos soa par ele" />
-          <EpisodeComponent animeName="Dragon ball super o melhor anime de todos aqui em petropolis aaaaaaaaaaaaa" />
-          <EpisodeComponent animeName="Dragon ball Z é um anime de todos, mas nem todos soa par ele" />
-          <EpisodeComponent animeName="Dragon ball super o melhor anime de todos aqui em petropolis aaaaaaaaaaaaa" />
-          <EpisodeComponent animeName="Dragon ball Z é um anime de todos, mas nem todos soa par ele" />
-          <EpisodeComponent animeName="Dragon ball super o melhor anime de todos aqui em petropolis aaaaaaaaaaaaa" />
-          <EpisodeComponent animeName="Dragon ball Z é um anime de todos, mas nem todos soa par ele" />
-          <EpisodeComponent animeName="Dragon ball super o melhor anime de todos aqui em petropolis aaaaaaaaaaaaa" />
-          <EpisodeComponent animeName="Dragon ball Z é um anime de todos, mas nem todos soa par ele" />
-          <EpisodeComponent animeName="Dragon ball super o melhor anime de todos aqui em petropolis aaaaaaaaaaaaa" />
-          <EpisodeComponent animeName="Dragon ball Z é um anime de todos, mas nem todos soa par ele" />
-          <EpisodeComponent animeName="Dragon ball super o melhor anime de todos aqui em petropolis aaaaaaaaaaaaa" />
-          <EpisodeComponent animeName="Dragon ball Z é um anime de todos, mas nem todos soa par ele" />
+          <EpisodeComponent
+            rota="/animes/dragon"
+            anime="Dragon ball super o melhor anime de todos aqui em petropolis aaaaaaaaaaaaa"
+            episode={1}
+            episodes={100}
+            poster="https://image.tmdb.org/t/p/original/kmO4AHj1xx8wiaBMgwGjXhOQfNt.jpg"
+          />
         </SectionEpisodes>
       </MainContent>
       <Footer />

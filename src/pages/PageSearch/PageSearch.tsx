@@ -30,34 +30,10 @@ export const PageSearch: React.FC = () => {
           <ComponentAnime
             type="animes"
             url="https://image.tmdb.org/t/p/original/kmO4AHj1xx8wiaBMgwGjXhOQfNt.jpg"
-          />
-          <ComponentAnime
-            type="animes"
-            url="https://image.tmdb.org/t/p/original/kmO4AHj1xx8wiaBMgwGjXhOQfNt.jpg"
-          />
-          <ComponentAnime
-            type="animes"
-            url="https://image.tmdb.org/t/p/original/kmO4AHj1xx8wiaBMgwGjXhOQfNt.jpg"
-          />
-          <ComponentAnime
-            type="animes"
-            url="https://image.tmdb.org/t/p/original/kmO4AHj1xx8wiaBMgwGjXhOQfNt.jpg"
-          />
-          <ComponentAnime
-            type="animes"
-            url="https://image.tmdb.org/t/p/original/kmO4AHj1xx8wiaBMgwGjXhOQfNt.jpg"
-          />
-          <ComponentAnime
-            type="animes"
-            url="https://image.tmdb.org/t/p/original/kmO4AHj1xx8wiaBMgwGjXhOQfNt.jpg"
-          />
-          <ComponentAnime
-            type="animes"
-            url="https://image.tmdb.org/t/p/original/kmO4AHj1xx8wiaBMgwGjXhOQfNt.jpg"
-          />
-          <ComponentAnime
-            type="animes"
-            url="https://image.tmdb.org/t/p/original/kmO4AHj1xx8wiaBMgwGjXhOQfNt.jpg"
+            anime="dragon ball"
+            date="2022"
+            rota="/animes/55"
+            title="leaflalr prooooo"
           />
         </BoxAnimes>
       </SectionResult>

@@ -26,32 +26,12 @@ export const CardAnimes: React.FC<TypeCardAnimes> = ({
       </BoxTitle>
       <BoxAnimes className="box-animes">
         <ComponentAnime
+          anime="dragon ball z"
           type={type}
           url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-        />
-        <ComponentAnime
-          type={type}
-          url="https://image.tmdb.org/t/p/original/jtBo40RgHzihmYYzzqkPOXyux8.jpg"
-        />
-        <ComponentAnime
-          type={type}
-          url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-        />
-        <ComponentAnime
-          type={type}
-          url="https://image.tmdb.org/t/p/original/jtBo40RgHzihmYYzzqkPOXyux8.jpg"
-        />
-        <ComponentAnime
-          type={type}
-          url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-        />
-        <ComponentAnime
-          type={type}
-          url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-        />
-        <ComponentAnime
-          type={type}
-          url="https://image.tmdb.org/t/p/original/jtBo40RgHzihmYYzzqkPOXyux8.jpg"
+          date="1989"
+          rota="/animes/555"
+          title="Anime dragonb ball"
         />
       </BoxAnimes>
     </ContainerCalendar>

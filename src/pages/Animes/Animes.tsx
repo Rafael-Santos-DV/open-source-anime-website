@@ -34,66 +34,10 @@ export const Animes: React.FC = () => {
             <ComponentAnime
               type="animes"
               url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-            />
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/jtBo40RgHzihmYYzzqkPOXyux8.jpg"
-            />
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/xVqqHhoMRPDJbXXjIjr8uveRFIn.jpg"
-            />
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-            />
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/lCPi4hXHjLQWv7j2TVsWoLE99Uw.jpg"
-            />
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-            />
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-            />
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-            />
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-            />
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-            />
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-            />
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-            />
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-            />
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-            />
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-            />
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
+              anime="Dragon ball"
+              date="2020"
+              rota="/animes/dd"
+              title="melhor animes de todos"
             />
           </ArticleAnime>
           <BoxNext>
@@ -104,11 +48,13 @@ export const Animes: React.FC = () => {
         <SideBarStar>
           <div className="box-feedback">
             <h2>Mais assistidos</h2>
-            <Watched />
-            <Watched />
-            <Watched />
-            <Watched />
-            <Watched />
+            <Watched
+              anime="dragon ball"
+              date="2022"
+              rota="/animes/dd"
+              star={4}
+              title="ola meus amigos"
+            />
           </div>
         </SideBarStar>
       </SectionAllAnimes>

@@ -16,7 +16,7 @@ import { Button } from '../../components/Button/Button';
 import { EpisodeComponent } from '../../components/Espisode/Episode';
 import { Footer } from '../../components/Footer/Footer';
 
-const url = 'https://pitou.goyabu.com/un-go/OVA-00.mp4';
+const url = 'https://pitou.goyabu.com/un-go/OVA-00.mp4'; // remover
 
 export const Play: React.FC = () => {
   return (
@@ -24,7 +24,16 @@ export const Play: React.FC = () => {
       <Header className="page-play">
         <img src={logo} alt="LF AnimesFlix" id="logo-master" />
         <Navigation navHeader isHome={false} />
-        <InformationAnime />
+        <InformationAnime
+          anime="dragon ball super"
+          date="20222"
+          description="melhor animes de todos"
+          episodes={2}
+          gender={['acao', 'comedia', 'eventura']}
+          poster="https://image.tmdb.org/t/p/original/kmO4AHj1xx8wiaBMgwGjXhOQfNt.jpg"
+          star={3}
+          title="anime leafar"
+        />
       </Header>
       <span className="line-blue" />
       <MainPlay>
@@ -45,10 +54,13 @@ export const Play: React.FC = () => {
       <SectionEpisodes>
         <h2>Episódios</h2>
         <ContentEpisodes>
-          <EpisodeComponent animeName="tudo biem" />
-          <EpisodeComponent animeName="tudo biem" />
-          <EpisodeComponent animeName="tudo biem" />
-          <EpisodeComponent animeName="tudo biem" />
+          <EpisodeComponent
+            rota="/animes/dragon"
+            anime="tudo biem"
+            episode={1}
+            episodes={100}
+            poster="https://image.tmdb.org/t/p/original/kmO4AHj1xx8wiaBMgwGjXhOQfNt.jpg"
+          />
         </ContentEpisodes>
       </SectionEpisodes>
       <Footer />

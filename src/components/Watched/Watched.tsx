@@ -1,19 +1,34 @@
 import { Link } from 'react-router-dom';
+import React from 'react';
 import { ContainerWatched } from './style';
 import imageTeste from '../../assets/teste.jpg';
-import star from '../../assets/star.svg';
+import starImage from '../../assets/star.svg';
 
-export const Watched = () => {
+type WatchedType = {
+  anime: string;
+  rota: string;
+  title: string;
+  date: string;
+  star: number;
+};
+
+export const Watched: React.FC<WatchedType> = ({
+  anime,
+  rota,
+  title,
+  date,
+  star,
+}) => {
   return (
     <ContainerWatched>
-      <Link to="/">
-        <img src={imageTeste} alt="tsete" className="anime" />
+      <Link to={rota}>
+        <img src={imageTeste} alt={title} className="anime" />
         <div className="content">
-          <strong>Nome do anime aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</strong>
-          <time>2022</time>
+          <strong>{anime}</strong>
+          <time>{date}</time>
           <div className="box-favorito">
-            <img src={star} alt="Favorito" />
-            <span>2</span>
+            <img src={starImage} alt="Favorito" />
+            <span>{star}</span>
           </div>
         </div>
       </Link>

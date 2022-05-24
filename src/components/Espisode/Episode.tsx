@@ -10,10 +10,20 @@ import playIcon from '../../assets/playicon.svg';
 import play from '../../assets/play.svg';
 
 type EpType = {
-  animeName: string;
+  anime: string;
+  poster: string;
+  episode: number;
+  episodes: number;
+  rota: string;
 };
 
-export const EpisodeComponent: React.FC<EpType> = ({ animeName }) => {
+export const EpisodeComponent: React.FC<EpType> = ({
+  anime,
+  poster,
+  episode,
+  episodes,
+  rota,
+}) => {
   const text = useRef(null);
 
   useEffect(() => {
@@ -39,12 +49,12 @@ export const EpisodeComponent: React.FC<EpType> = ({ animeName }) => {
   }, []);
   return (
     <ContainerEpisode className="episode">
-      <Link to="/" className="content">
+      <Link to={rota} className="content">
         <ContentImage>
           <img
             className="poster"
-            src="https://image.tmdb.org/t/p/original/6IWSgYjhWIPCUJrSfIw6rNeC9HH.jpg"
-            alt=""
+            src={poster}
+            alt={`Episodio ${episode}`}
             loading="lazy"
           />
 
@@ -54,11 +64,13 @@ export const EpisodeComponent: React.FC<EpType> = ({ animeName }) => {
         </ContentImage>
         <BoxInfo>
           <strong>
-            <span className="ep">1/100 </span>
-            <span ref={text}>{animeName}</span>
+            <span className="ep">
+              {episode}/{episodes}
+            </span>
+            <span ref={text}>{anime}</span>
           </strong>
           <div className="content-play">
-            <img src={playIcon} alt="" />
+            <img src={playIcon} alt="Play" />
           </div>
         </BoxInfo>
       </Link>
