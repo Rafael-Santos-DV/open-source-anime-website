@@ -104,6 +104,7 @@ export const Content = styled.article`
 
     p {
       font-size: 4vw;
+      padding-bottom: 15px;
     }
   }
 
@@ -113,6 +114,6 @@ export const Content = styled.article`
   }
 
   @media only screen and (max-width: 350px) {
-    grid-row: 3;
+    grid-row: 4;
   }
 `;

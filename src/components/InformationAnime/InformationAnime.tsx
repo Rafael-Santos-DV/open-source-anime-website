@@ -13,7 +13,7 @@ import calendar from '../../assets/calendar.svg';
 
 export const InformationAnime: React.FC = () => {
   return (
-    <ContainerInformation>
+    <ContainerInformation className="box-article">
       <img
         className="poster-info"
         src="https://image.tmdb.org/t/p/original/nTNqhbHL6Elwx7Uex6Zy03JRSP9.jpg"

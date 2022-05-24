@@ -1,9 +1,11 @@
 import React from 'react';
 import { Header } from '../../components/Header/Header';
 import { Navigation } from '../../components/Navigation/Navigation';
-import { Container, SectionEpisodes } from './style';
+import { Container, MainOfAnime, SectionEpisodes } from './style';
 import logo from '../../assets/logo.svg';
 import { InformationAnime } from '../../components/InformationAnime/InformationAnime';
+import { EpisodeComponent } from '../../components/Espisode/Episode';
+import { Footer } from '../../components/Footer/Footer';
 
 export const InfoAnime: React.FC = () => {
   return (
@@ -14,7 +16,24 @@ export const InfoAnime: React.FC = () => {
         <InformationAnime />
       </Header>
       <span className="line-blue" />
-      <SectionEpisodes />
+      <SectionEpisodes>
+        <h1>Episódios</h1>
+        <MainOfAnime>
+          <EpisodeComponent animeName="aaaaaaaaaaaaaaaaa" />
+          <EpisodeComponent animeName="aaaaaaaaaaaaaaaaa" />
+
+          <EpisodeComponent animeName="aaaaaaaaaaaaaaaaa" />
+
+          <EpisodeComponent animeName="aaaaaaaaaaaaaaaaa" />
+          <EpisodeComponent animeName="aaaaaaaaaaaaaaaaa" />
+          <EpisodeComponent animeName="aaaaaaaaaaaaaaaaa" />
+
+          <EpisodeComponent animeName="aaaaaaaaaaaaaaaaa" />
+
+          <EpisodeComponent animeName="aaaaaaaaaaaaaaaaa" />
+        </MainOfAnime>
+      </SectionEpisodes>
+      <Footer />
     </Container>
   );
 };

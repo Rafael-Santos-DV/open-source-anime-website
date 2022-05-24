@@ -13,14 +13,14 @@ import {
 } from './styles';
 import logo from '../../assets/logo.svg';
 import { ComponentAnime } from '../../components/Anime/Anime';
-import { ButtonLetter } from '../../components/ButtonLetter/ButtonLetter';
+import { Button } from '../../components/Button/Button';
 import { Footer } from '../../components/Footer/Footer';
 import { Watched } from '../../components/Watched/Watched';
 
 export const Animes: React.FC = () => {
   return (
     <ContainerAnimes>
-      <Header>
+      <Header className="page-animes-header">
         <img src={logo} alt="LF AnimesFlix" id="logo-master" />
         <Navigation navHeader isHome={false} />
       </Header>
@@ -97,8 +97,8 @@ export const Animes: React.FC = () => {
             />
           </ArticleAnime>
           <BoxNext>
-            <ButtonLetter className="button-next">1</ButtonLetter>
-            <ButtonLetter className="button-next">Próximo</ButtonLetter>
+            <Button className="button-next">1</Button>
+            <Button className="button-next">Próximo</Button>
           </BoxNext>
         </MainContent>
         <SideBarStar>

@@ -21,7 +21,6 @@ export const EpisodeComponent: React.FC<EpType> = ({ animeName }) => {
 
     if (span) {
       const value = span.innerText.split('');
-      console.log(span);
       if (value.length >= 20) {
         if (window.innerWidth > 768) {
           console.log(window.innerWidth);
@@ -39,12 +38,12 @@ export const EpisodeComponent: React.FC<EpType> = ({ animeName }) => {
     }
   }, []);
   return (
-    <ContainerEpisode>
+    <ContainerEpisode className="episode">
       <Link to="/" className="content">
         <ContentImage>
           <img
             className="poster"
-            src="https://www.themoviedb.org/t/p/w160_and_h90_bestv2/do38h5WNe5gW8Z5QMZR6hNZXPjk.jpg"
+            src="https://image.tmdb.org/t/p/original/6IWSgYjhWIPCUJrSfIw6rNeC9HH.jpg"
             alt=""
             loading="lazy"
           />
