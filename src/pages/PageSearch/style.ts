@@ -20,6 +20,11 @@ export const SectionResult = styled.section`
   flex-direction: column;
   gap: 10px;
   padding: 10px;
+
+  .anime-not-found {
+    color: red;
+    font-size: 20px;
+  }
 `;
 
 export const BoxTitle = styled.article`

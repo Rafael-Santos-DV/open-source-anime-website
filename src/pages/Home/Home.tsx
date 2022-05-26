@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Header } from '../../components/Header/Header';
 import { CalendarOfAnimes, ContainerHome, SectionFiltro } from './styles';
 import logo from '../../assets/logo.svg';
@@ -7,10 +7,16 @@ import { Search } from '../../components/Search/Search';
 import { Button } from '../../components/Button/Button';
 import { CardAnimes } from '../../components/CardAnimes/CalendarCard';
 import { Footer } from '../../components/Footer/Footer';
-import { useAllData } from '../../hooks/useAllData';
+import { useContextData } from '../../hooks/useContextData';
+import { useLocalPath } from '../../hooks/usePath';
 
 export const Home: React.FC = () => {
-  const data = useAllData();
+  const data = useContextData();
+  const location = useLocalPath();
+
+  useEffect(() => {
+    window.scrollTo({ behavior: 'smooth', top: 0 });
+  }, [location]);
 
   return (
     <ContainerHome>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Header } from '../../components/Header/Header';
 import { Navigation } from '../../components/Navigation/Navigation';
 
@@ -16,10 +16,17 @@ import { ComponentAnime } from '../../components/Anime/Anime';
 import { Button } from '../../components/Button/Button';
 import { Footer } from '../../components/Footer/Footer';
 import { Watched } from '../../components/Watched/Watched';
-import { useAllData } from '../../hooks/useAllData';
+import { useContextData } from '../../hooks/useContextData';
+import { useLocalPath } from '../../hooks/usePath';
 
 export const Animes: React.FC = () => {
-  const data = useAllData();
+  const data = useContextData();
+
+  const location = useLocalPath();
+
+  useEffect(() => {
+    window.scrollTo({ behavior: 'smooth', top: 0 });
+  }, [location]);
 
   return (
     <ContainerAnimes>

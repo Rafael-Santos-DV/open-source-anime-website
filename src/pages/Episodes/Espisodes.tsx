@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Header } from '../../components/Header/Header';
 import { Container, MainContent, SectionEpisodes } from './styles';
 import logo from '../../assets/logo.svg';
 import { Navigation } from '../../components/Navigation/Navigation';
 import { Footer } from '../../components/Footer/Footer';
 import { EpisodeComponent } from '../../components/Espisode/Episode';
-import { useAllData } from '../../hooks/useAllData';
+import { useContextData } from '../../hooks/useContextData';
+import { useLocalPath } from '../../hooks/usePath';
 
 export const Episodes: React.FC = () => {
   // amanha fazer manuntencao aqui
-  const data = useAllData()?.reverse();
+  const data = useContextData()?.reverse();
+
+  const location = useLocalPath();
+
+  useEffect(() => {
+    window.scrollTo({ behavior: 'smooth', top: 0 });
+  }, [location]);
+
   return (
     <Container>
       <Header className="header-episodes">

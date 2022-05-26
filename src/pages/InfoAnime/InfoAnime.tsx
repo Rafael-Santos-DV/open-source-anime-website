@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Header } from '../../components/Header/Header';
 import { Navigation } from '../../components/Navigation/Navigation';
@@ -8,10 +8,17 @@ import { InformationAnime } from '../../components/InformationAnime/InformationA
 import { EpisodeComponent } from '../../components/Espisode/Episode';
 import { Footer } from '../../components/Footer/Footer';
 import { useUniqueAnime } from '../../hooks/useUniqueAnime';
+import { useLocalPath } from '../../hooks/usePath';
 
 export const InfoAnime: React.FC = () => {
   const { animeId } = useParams<{ animeId: string }>();
   const data = useUniqueAnime(animeId);
+
+  const location = useLocalPath();
+
+  useEffect(() => {
+    window.scrollTo({ behavior: 'smooth', top: 0 });
+  }, [location]);
 
   return (
     <Container>

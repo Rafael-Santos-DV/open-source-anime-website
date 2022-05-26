@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Header } from '../../components/Header/Header';
 import {
@@ -17,6 +17,8 @@ import { Button } from '../../components/Button/Button';
 import { EpisodeComponent } from '../../components/Espisode/Episode';
 import { Footer } from '../../components/Footer/Footer';
 import { useUniqueAnime } from '../../hooks/useUniqueAnime';
+import { Video } from '../../components/Video/Video';
+import { useLocalPath } from '../../hooks/usePath';
 
 export const Play: React.FC = () => {
   const params = useParams<{
@@ -25,9 +27,14 @@ export const Play: React.FC = () => {
   }>();
 
   const { episode, animeId } = params;
-
   const data = useUniqueAnime(animeId);
-  console.log(params);
+
+  const location = useLocalPath();
+
+  useEffect(() => {
+    window.scrollTo({ behavior: 'smooth', top: 0 });
+  }, [location]);
+
   return (
     <ContainerPlay>
       <Header className="page-play">
@@ -56,9 +63,9 @@ export const Play: React.FC = () => {
         </BoxPreOrNext>
         <ContainerVideo>
           {data && episode && (
-            <video controls poster={data.episodePoster}>
+            <Video status={episode} poster={data.episodePoster} controls>
               <source src={data.episodes[Number(episode) - 1].url} />
-            </video>
+            </Video>
           )}
         </ContainerVideo>
       </MainPlay>
@@ -68,6 +75,7 @@ export const Play: React.FC = () => {
           {data &&
             data.episodes.map((value, index) => (
               <EpisodeComponent
+                key={value.title}
                 rota={`/animes/${data.animeId}/${index + 1}`}
                 anime={data.anime}
                 episode={index + 1}

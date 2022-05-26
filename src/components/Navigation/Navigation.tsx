@@ -11,9 +11,14 @@ import { Search } from '../Search/Search';
 type NavType = {
   navHeader: boolean;
   isHome: boolean;
+  searchFunction?: (value: string) => void;
 };
 
-export const Navigation: React.FC<NavType> = ({ navHeader, isHome }) => {
+export const Navigation: React.FC<NavType> = ({
+  navHeader,
+  isHome,
+  searchFunction,
+}) => {
   const [active, setActive] = useState(false);
 
   const handleActiveMobile = () => {
@@ -42,7 +47,7 @@ export const Navigation: React.FC<NavType> = ({ navHeader, isHome }) => {
           <img src={foursquares} alt="Episódios" />
           <span>Episódios</span>
         </Link>
-        {navHeader && !isHome && <Search />}
+        {navHeader && !isHome && <Search callback={searchFunction} />}
       </div>
     </Nav>
   );
