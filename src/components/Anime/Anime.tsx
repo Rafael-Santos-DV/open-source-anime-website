@@ -24,7 +24,12 @@ export const ComponentAnime: React.FC<AnimeType> = ({
     <Link to={rota} className="box-anime-link">
       <Anime className={` ${type === 'animes' ? 'animes-pad' : ''}`}>
         <EffectBackground>
-          <img src={url} alt={title} className="background-image-anime" />
+          <img
+            src={url}
+            alt={title}
+            className="background-image-anime"
+            loading="lazy"
+          />
           <EffectPlay className="effect-play" type={type}>
             <img src={play} alt="Ver anime" className="image-play" />
             {type === 'animes' && <span>Ver anime</span>}

@@ -8,7 +8,6 @@ import { Footer } from '../../components/Footer/Footer';
 import { ComponentAnime } from '../../components/Anime/Anime';
 import { useContextData } from '../../hooks/useContextData';
 import { ResponseData } from '../../types/responseData';
-// import { useLocalPath } from '../../hooks/usePath';
 
 export const PageSearch: React.FC = () => {
   const [getQuery, setParam] = useSearchParams();

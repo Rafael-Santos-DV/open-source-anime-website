@@ -70,7 +70,7 @@ export const EpisodeComponent: React.FC<EpType> = ({
             <span ref={text}> {anime}</span>
           </strong>
           <div className="content-play">
-            <img src={playIcon} alt="Play" />
+            <img src={playIcon} alt="Play" loading="lazy" />
           </div>
         </BoxInfo>
       </Link>

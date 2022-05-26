@@ -62,6 +62,19 @@ export const BoxAnimes = styled.article`
         background-color: rgba(0, 0, 0, 0.6);
       }
     }
+
+    @media only screen and (min-width: 850px) {
+      img.background-image-anime {
+        height: 350px;
+      }
+    }
+
+    @media only screen and (max-width: 850px) {
+      img.background-image-anime {
+        min-height: 35vw;
+        max-height: 35vw;
+      }
+    }
   }
 
   @media only screen and (max-width: 768px) {

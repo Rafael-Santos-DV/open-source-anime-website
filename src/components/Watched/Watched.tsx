@@ -23,7 +23,7 @@ export const Watched: React.FC<WatchedType> = ({
   return (
     <ContainerWatched>
       <Link to={rota}>
-        <img src={poster} alt={title} className="anime" />
+        <img src={poster} alt={title} className="anime" loading="lazy" />
         <div className="content">
           <strong>{anime}</strong>
           <time>{date}</time>

@@ -34,7 +34,7 @@ export const InformationAnime: React.FC<InformationType> = ({
 }) => {
   return (
     <ContainerInformation className="box-article">
-      <img className="poster-info" src={poster} alt={title} />
+      <img className="poster-info" src={poster} alt={title} loading="lazy" />
       <Information>
         <Title>
           <h1>{anime}</h1>
@@ -57,7 +57,7 @@ export const InformationAnime: React.FC<InformationType> = ({
               <strong>Episódios</strong>
             </div>
             <div>
-              <img src={starImage} alt="Feedback" />
+              <img src={starImage} alt="Feedback" loading="lazy" />
               <span>{star}</span>
             </div>
           </TypeAnime>

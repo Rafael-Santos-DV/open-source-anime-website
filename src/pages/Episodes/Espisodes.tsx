@@ -9,7 +9,6 @@ import { useContextData } from '../../hooks/useContextData';
 import { useLocalPath } from '../../hooks/usePath';
 
 export const Episodes: React.FC = () => {
-  // amanha fazer manuntencao aqui
   const data = useContextData()?.reverse();
 
   const location = useLocalPath();
