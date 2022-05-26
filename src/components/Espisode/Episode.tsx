@@ -67,7 +67,7 @@ export const EpisodeComponent: React.FC<EpType> = ({
             <span className="ep">
               {episode}/{episodes}
             </span>
-            <span ref={text}>{anime}</span>
+            <span ref={text}> {anime}</span>
           </strong>
           <div className="content-play">
             <img src={playIcon} alt="Play" />

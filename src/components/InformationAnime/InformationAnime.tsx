@@ -43,7 +43,7 @@ export const InformationAnime: React.FC<InformationType> = ({
           <Gender>
             <ul>
               {gender.map((value) => (
-                <li>{value}</li>
+                <li key={value}>{value}</li>
               ))}
             </ul>
           </Gender>
@@ -57,7 +57,7 @@ export const InformationAnime: React.FC<InformationType> = ({
               <strong>Episódios</strong>
             </div>
             <div>
-              <img src={starImage} alt="" />
+              <img src={starImage} alt="Feedback" />
               <span>{star}</span>
             </div>
           </TypeAnime>

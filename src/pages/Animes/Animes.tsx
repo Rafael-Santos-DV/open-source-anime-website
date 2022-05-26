@@ -16,8 +16,11 @@ import { ComponentAnime } from '../../components/Anime/Anime';
 import { Button } from '../../components/Button/Button';
 import { Footer } from '../../components/Footer/Footer';
 import { Watched } from '../../components/Watched/Watched';
+import { useAllData } from '../../hooks/useAllData';
 
 export const Animes: React.FC = () => {
+  const data = useAllData();
+
   return (
     <ContainerAnimes>
       <Header className="page-animes-header">
@@ -31,14 +34,18 @@ export const Animes: React.FC = () => {
             <strong>Animes</strong>
           </TitlePage>
           <ArticleAnime>
-            <ComponentAnime
-              type="animes"
-              url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-              anime="Dragon ball"
-              date="2020"
-              rota="/animes/dd"
-              title="melhor animes de todos"
-            />
+            {data &&
+              data.map((value) => (
+                <ComponentAnime
+                  key={value.animeId}
+                  type="animes"
+                  url={value.poster}
+                  anime={value.anime}
+                  date={value.ano}
+                  rota={`/animes/${value.animeId}`}
+                  title={value.description}
+                />
+              ))}
           </ArticleAnime>
           <BoxNext>
             <Button className="button-next">1</Button>
@@ -48,13 +55,21 @@ export const Animes: React.FC = () => {
         <SideBarStar>
           <div className="box-feedback">
             <h2>Mais assistidos</h2>
-            <Watched
-              anime="dragon ball"
-              date="2022"
-              rota="/animes/dd"
-              star={4}
-              title="ola meus amigos"
-            />
+            {data &&
+              data
+                .filter((filter) => filter.likes >= 7)
+                .slice(0, 5)
+                .map((value) => (
+                  <Watched
+                    poster={value.poster}
+                    key={value.animeId}
+                    anime={value.anime}
+                    date={String(value.ano)}
+                    rota={`/animes/${value.animeId}`}
+                    star={value.likes}
+                    title={value.description}
+                  />
+                ))}
           </div>
         </SideBarStar>
       </SectionAllAnimes>

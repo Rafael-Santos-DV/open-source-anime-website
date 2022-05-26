@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 import { ContainerWatched } from './style';
-import imageTeste from '../../assets/teste.jpg';
 import starImage from '../../assets/star.svg';
 
 type WatchedType = {
@@ -10,6 +9,7 @@ type WatchedType = {
   title: string;
   date: string;
   star: number;
+  poster: string;
 };
 
 export const Watched: React.FC<WatchedType> = ({
@@ -18,11 +18,12 @@ export const Watched: React.FC<WatchedType> = ({
   title,
   date,
   star,
+  poster,
 }) => {
   return (
     <ContainerWatched>
       <Link to={rota}>
-        <img src={imageTeste} alt={title} className="anime" />
+        <img src={poster} alt={title} className="anime" />
         <div className="content">
           <strong>{anime}</strong>
           <time>{date}</time>

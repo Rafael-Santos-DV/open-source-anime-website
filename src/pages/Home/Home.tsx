@@ -7,8 +7,11 @@ import { Search } from '../../components/Search/Search';
 import { Button } from '../../components/Button/Button';
 import { CardAnimes } from '../../components/CardAnimes/CalendarCard';
 import { Footer } from '../../components/Footer/Footer';
+import { useAllData } from '../../hooks/useAllData';
 
 export const Home: React.FC = () => {
+  const data = useAllData();
+
   return (
     <ContainerHome>
       <Header className="header-position">
@@ -46,11 +49,17 @@ export const Home: React.FC = () => {
       </SectionFiltro>
       <CalendarOfAnimes>
         <CardAnimes
-          title="Calendário de 2022"
+          title={`Calendário de ${new Date().getFullYear()}`}
           type="calendar"
           className="container-calendar"
+          data={data}
         />
-        <CardAnimes title="Animes" className="container-animes" type="animes" />
+        <CardAnimes
+          title="Animes"
+          className="container-animes"
+          type="animes"
+          data={data}
+        />
       </CalendarOfAnimes>
       <Footer />
     </ContainerHome>

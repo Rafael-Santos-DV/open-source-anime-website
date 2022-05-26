@@ -5,8 +5,11 @@ import logo from '../../assets/logo.svg';
 import { Navigation } from '../../components/Navigation/Navigation';
 import { Footer } from '../../components/Footer/Footer';
 import { EpisodeComponent } from '../../components/Espisode/Episode';
+import { useAllData } from '../../hooks/useAllData';
 
 export const Episodes: React.FC = () => {
+  // amanha fazer manuntencao aqui
+  const data = useAllData()?.reverse();
   return (
     <Container>
       <Header className="header-episodes">
@@ -16,13 +19,21 @@ export const Episodes: React.FC = () => {
       <MainContent>
         <h1>Episódios</h1>
         <SectionEpisodes>
-          <EpisodeComponent
-            rota="/animes/dragon"
-            anime="Dragon ball super o melhor anime de todos aqui em petropolis aaaaaaaaaaaaa"
-            episode={1}
-            episodes={100}
-            poster="https://image.tmdb.org/t/p/original/kmO4AHj1xx8wiaBMgwGjXhOQfNt.jpg"
-          />
+          {data &&
+            data.map((anim) =>
+              anim.episodes
+                .slice(anim.episodes.length - 2, anim.episodes.length - 1)
+                .map(() => (
+                  <EpisodeComponent
+                    key={anim.animeId}
+                    rota={`/animes/${anim.animeId}/${anim.quant}`}
+                    anime={anim.anime}
+                    episode={anim.quant}
+                    episodes={anim.quant}
+                    poster={anim.episodePoster}
+                  />
+                ))
+            )}
         </SectionEpisodes>
       </MainContent>
       <Footer />

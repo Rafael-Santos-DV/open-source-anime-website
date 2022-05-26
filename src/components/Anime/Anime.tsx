@@ -7,7 +7,7 @@ type AnimeType = {
   type: 'animes' | 'calendar';
   url: string;
   anime: string;
-  date: string;
+  date: number | string;
   rota: string;
   title: string;
 };
