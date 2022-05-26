@@ -30,6 +30,7 @@ export const HeaderStyle = styled.header<HeaderType>`
 
   img {
     z-index: 1;
+    cursor: pointer;
   }
 
   @media only screen and (max-width: 768px) {

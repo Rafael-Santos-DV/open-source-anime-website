@@ -6,14 +6,30 @@ import play from '../../assets/play.svg';
 type AnimeType = {
   type: 'animes' | 'calendar';
   url: string;
+  anime: string;
+  date: number | string;
+  rota: string;
+  title: string;
 };
 
-export const ComponentAnime: React.FC<AnimeType> = ({ type, url }) => {
+export const ComponentAnime: React.FC<AnimeType> = ({
+  type,
+  url,
+  anime,
+  date,
+  rota,
+  title,
+}) => {
   return (
-    <Link to="/" className="box-anime-link">
+    <Link to={rota} className="box-anime-link">
       <Anime className={` ${type === 'animes' ? 'animes-pad' : ''}`}>
         <EffectBackground>
-          <img src={url} alt="teste" className="background-image-anime" />
+          <img
+            src={url}
+            alt={title}
+            className="background-image-anime"
+            loading="lazy"
+          />
           <EffectPlay className="effect-play" type={type}>
             <img src={play} alt="Ver anime" className="image-play" />
             {type === 'animes' && <span>Ver anime</span>}
@@ -21,8 +37,8 @@ export const ComponentAnime: React.FC<AnimeType> = ({ type, url }) => {
         </EffectBackground>
 
         <div className="content-info">
-          <strong>Nome do anime</strong>
-          <time>2022</time>
+          <strong>{anime}</strong>
+          <time>{date}</time>
         </div>
       </Anime>
     </Link>

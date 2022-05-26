@@ -41,7 +41,20 @@ export const ArticleAnime = styled.article`
     transition: border 1s;
 
     img.background-image-anime {
-      min-height: 100px;
+      @media only screen and (max-width: 1000px) {
+        min-height: 32vw;
+        max-height: 32vw;
+      }
+
+      @media only screen and (min-width: 1000px) {
+        min-height: 20vw;
+        max-height: 20vw;
+      }
+
+      @media only screen and (min-width: 1400px) {
+        min-height: 300px;
+        max-height: 300px;
+      }
     }
 
     &:hover {

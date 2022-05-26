@@ -36,6 +36,22 @@ export const ContentImage = styled.div`
   img.poster {
     width: 100%;
     transition: transform 200ms;
+
+    @media only screen and (max-width: 1200px) {
+      min-height: 17vw;
+      max-height: 17vw;
+    }
+
+    @media only screen and (max-width: 768px) {
+      min-height: 20vw;
+      /* height: 10vw; */
+      max-height: 20vw;
+    }
+    @media only screen and (max-width: 550px) {
+      min-height: 18vw;
+      /* height: 10vw; */
+      max-height: 18vw;
+    }
   }
 `;
 

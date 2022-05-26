@@ -20,6 +20,11 @@ export const SectionResult = styled.section`
   flex-direction: column;
   gap: 10px;
   padding: 10px;
+
+  .anime-not-found {
+    color: red;
+    font-size: 20px;
+  }
 `;
 
 export const BoxTitle = styled.article`
@@ -55,6 +60,19 @@ export const BoxAnimes = styled.article`
       div.effect-play {
         display: flex;
         background-color: rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    @media only screen and (min-width: 850px) {
+      img.background-image-anime {
+        height: 350px;
+      }
+    }
+
+    @media only screen and (max-width: 850px) {
+      img.background-image-anime {
+        min-height: 35vw;
+        max-height: 35vw;
       }
     }
   }

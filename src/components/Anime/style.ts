@@ -16,7 +16,6 @@ export const Anime = styled.div`
 
   img {
     width: 100%;
-    /* max-height: 200px; */
     transition: transform 500ms ease-out;
   }
 

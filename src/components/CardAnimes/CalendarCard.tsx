@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { ResponseData } from '../../types/responseData';
 import { ComponentAnime } from '../Anime/Anime';
 import { BoxAnimes, BoxTitle, ContainerCalendar } from './styles';
 
@@ -7,13 +8,27 @@ type TypeCardAnimes = {
   className?: string;
   // data?: Array<string>;
   type: 'calendar' | 'animes';
+  data: ResponseData[] | undefined;
 };
 
 export const CardAnimes: React.FC<TypeCardAnimes> = ({
   title,
   className,
   type,
+  data,
 }) => {
+  const [filterValues, setValues] = useState<ResponseData[]>();
+
+  useEffect(() => {
+    const newData = data?.filter((value) =>
+      type === 'calendar'
+        ? String(value.ano) === String(new Date().getFullYear())
+        : value
+    );
+
+    setValues(newData);
+  }, [data]);
+
   return (
     <ContainerCalendar className={className}>
       <BoxTitle>
@@ -25,34 +40,18 @@ export const CardAnimes: React.FC<TypeCardAnimes> = ({
         <h1>{title}</h1>
       </BoxTitle>
       <BoxAnimes className="box-animes">
-        <ComponentAnime
-          type={type}
-          url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-        />
-        <ComponentAnime
-          type={type}
-          url="https://image.tmdb.org/t/p/original/jtBo40RgHzihmYYzzqkPOXyux8.jpg"
-        />
-        <ComponentAnime
-          type={type}
-          url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-        />
-        <ComponentAnime
-          type={type}
-          url="https://image.tmdb.org/t/p/original/jtBo40RgHzihmYYzzqkPOXyux8.jpg"
-        />
-        <ComponentAnime
-          type={type}
-          url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-        />
-        <ComponentAnime
-          type={type}
-          url="https://image.tmdb.org/t/p/original/e7n55C4027aRPHNmjE8XIk8nKvZ.jpg"
-        />
-        <ComponentAnime
-          type={type}
-          url="https://image.tmdb.org/t/p/original/jtBo40RgHzihmYYzzqkPOXyux8.jpg"
-        />
+        {filterValues &&
+          filterValues.map((value) => (
+            <ComponentAnime
+              key={value.description}
+              anime={value.anime}
+              type={type}
+              url={value.poster}
+              date={value.ano}
+              rota={`/animes/${value.animeId}`}
+              title={value.description}
+            />
+          ))}
       </BoxAnimes>
     </ContainerCalendar>
   );

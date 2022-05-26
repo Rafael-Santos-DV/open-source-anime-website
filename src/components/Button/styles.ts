@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { colors } from '../../colors/colors';
 
 export const ButtonComponent = styled.button`
@@ -12,6 +12,13 @@ export const ButtonComponent = styled.button`
   font-weight: bold;
   transition: filter 200ms ease;
   z-index: 1;
+  ${(props) =>
+    props.disabled
+      ? css`
+          background-color: #ccc !important;
+        `
+      : ''}
+
   &:hover {
     filter: brightness(0.5);
   }
