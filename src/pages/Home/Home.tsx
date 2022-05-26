@@ -78,7 +78,12 @@ export const Home: React.FC = () => {
       <span className="line" />
       <SectionFiltro>
         {Letter.map((letter) => (
-          <Button onClick={() => handleFilterLetter(letter)}>{letter}</Button>
+          <Button
+            key={`${letter}-1`}
+            onClick={() => handleFilterLetter(letter)}
+          >
+            {letter}
+          </Button>
         ))}
       </SectionFiltro>
       <CalendarOfAnimes>
