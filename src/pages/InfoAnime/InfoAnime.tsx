@@ -9,6 +9,7 @@ import { EpisodeComponent } from '../../components/Espisode/Episode';
 import { Footer } from '../../components/Footer/Footer';
 import { useUniqueAnime } from '../../hooks/useUniqueAnime';
 import { useLocalPath } from '../../hooks/usePath';
+import { Loading } from '../../components/Loading/Loading';
 
 export const InfoAnime: React.FC = () => {
   const { animeId } = useParams<{ animeId: string }>();
@@ -38,6 +39,7 @@ export const InfoAnime: React.FC = () => {
             title={data.description}
           />
         )}
+        {!data && <Loading text="Carregando Animes" />}
       </Header>
       <span className="line-blue" />
       <SectionEpisodes>
@@ -54,6 +56,7 @@ export const InfoAnime: React.FC = () => {
                 poster={data.episodePoster}
               />
             ))}
+          {!data && <Loading text="Carregando Animes" />}
         </MainOfAnime>
       </SectionEpisodes>
       <Footer />

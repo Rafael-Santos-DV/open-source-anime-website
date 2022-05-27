@@ -19,6 +19,7 @@ import { Footer } from '../../components/Footer/Footer';
 import { useUniqueAnime } from '../../hooks/useUniqueAnime';
 import { Video } from '../../components/Video/Video';
 import { useLocalPath } from '../../hooks/usePath';
+import { Loading } from '../../components/Loading/Loading';
 
 export const Play: React.FC = () => {
   const params = useParams<{
@@ -83,6 +84,7 @@ export const Play: React.FC = () => {
                 poster={data.episodePoster}
               />
             ))}
+          {!data && <Loading text="Carregando" />}
         </ContentEpisodes>
       </SectionEpisodes>
       <Footer />
