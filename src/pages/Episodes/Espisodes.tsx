@@ -7,6 +7,7 @@ import { Footer } from '../../components/Footer/Footer';
 import { EpisodeComponent } from '../../components/Espisode/Episode';
 import { useContextData } from '../../hooks/useContextData';
 import { useLocalPath } from '../../hooks/usePath';
+import { Loading } from '../../components/Loading/Loading';
 
 export const Episodes: React.FC = () => {
   const data = useContextData()?.reverse();
@@ -26,6 +27,7 @@ export const Episodes: React.FC = () => {
       <MainContent>
         <h1>Episódios</h1>
         <SectionEpisodes>
+          {!data && <Loading text="Carregando" />}
           {data &&
             data.map((anim) =>
               anim.episodes
