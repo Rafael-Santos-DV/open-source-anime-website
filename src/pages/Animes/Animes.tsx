@@ -18,6 +18,7 @@ import { Footer } from '../../components/Footer/Footer';
 import { Watched } from '../../components/Watched/Watched';
 import { useContextData } from '../../hooks/useContextData';
 import { useLocalPath } from '../../hooks/usePath';
+import { Loading } from '../../components/Loading/Loading';
 
 export const Animes: React.FC = () => {
   const data = useContextData();
@@ -81,6 +82,7 @@ export const Animes: React.FC = () => {
             <strong>Animes</strong>
           </TitlePage>
           <ArticleAnime>
+            {!data && <Loading text="Carregando" />}
             {data &&
               data
                 .slice(Number(more.init), Number(more.end))

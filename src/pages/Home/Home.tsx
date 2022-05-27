@@ -10,6 +10,7 @@ import { CardAnimes } from '../../components/CardAnimes/CalendarCard';
 import { Footer } from '../../components/Footer/Footer';
 import { useContextData } from '../../hooks/useContextData';
 import { useLocalPath } from '../../hooks/usePath';
+import { Loading } from '../../components/Loading/Loading';
 
 const Letter = [
   'a',
@@ -93,12 +94,14 @@ export const Home: React.FC = () => {
           className="container-calendar"
           data={data}
         />
+        {!data && <Loading text="Carregando Animes" />}
         <CardAnimes
           title="Animes"
           className="container-animes"
           type="animes"
           data={data}
         />
+        {!data && <Loading text="Carregando Animes" />}
       </CalendarOfAnimes>
       <Footer />
     </ContainerHome>
