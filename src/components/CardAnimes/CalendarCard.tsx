@@ -43,7 +43,8 @@ export const CardAnimes: React.FC<TypeCardAnimes> = ({
         {filterValues &&
           filterValues.map((value) => (
             <ComponentAnime
-              key={value.description}
+              // eslint-disable-next-line
+              key={`${value._id}`}
               anime={value.anime}
               type={type}
               url={value.poster}

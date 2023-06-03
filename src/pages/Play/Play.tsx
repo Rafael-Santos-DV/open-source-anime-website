@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Header } from '../../components/Header/Header';
 import {
   BoxPreOrNext,
@@ -28,9 +28,11 @@ export const Play: React.FC = () => {
   }>();
 
   const { episode, animeId } = params;
-  const data = useUniqueAnime(animeId);
+  const data = useUniqueAnime(animeId as string);
 
-  const location = useLocalPath();
+  const useRouter = useNavigate();
+
+  const location = useLocalPath() as any;
 
   useEffect(() => {
     window.scrollTo({ behavior: 'smooth', top: 0 });
@@ -58,9 +60,25 @@ export const Play: React.FC = () => {
       <span className="line-blue" />
       <MainPlay>
         <BoxPreOrNext>
-          <Button>Anterior</Button>
-          <Button>Episódios</Button>
-          <Button>Próximo</Button>
+          <Button
+            disabled={Number(episode) === 1}
+            onClick={() =>
+              useRouter(`${location.pathname}/../${Number(episode) - 1}`)
+            }
+          >
+            Anterior
+          </Button>
+          <Button onClick={() => useRouter(`${location.pathname}/..`)}>
+            Episódios
+          </Button>
+          <Button
+            disabled={Number(episode) === data?.episodes.length}
+            onClick={() =>
+              useRouter(`${location.pathname}/../${Number(episode) + 1}`)
+            }
+          >
+            Próximo
+          </Button>
         </BoxPreOrNext>
         <ContainerVideo>
           {data && episode && (
@@ -69,6 +87,10 @@ export const Play: React.FC = () => {
             </Video>
           )}
         </ContainerVideo>
+        <div>
+          <span>Assistindo Episódio: </span>
+          {episode}
+        </div>
       </MainPlay>
       <SectionEpisodes>
         <h2>Episódios</h2>
@@ -82,6 +104,7 @@ export const Play: React.FC = () => {
                 episode={index + 1}
                 episodes={data.quant}
                 poster={data.episodePoster}
+                isPlayer={index + 1 === Number(episode)}
               />
             ))}
           {!data && <Loading text="Carregando" />}

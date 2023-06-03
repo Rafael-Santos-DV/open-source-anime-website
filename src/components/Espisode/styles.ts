@@ -6,6 +6,10 @@ export const ContainerEpisode = styled.article`
   border-radius: 5px;
   overflow: hidden;
 
+  a.isPlayer {
+    border: 3px solid ${colors.colorBlue};
+  }
+
   a.content {
     display: flex;
     flex-direction: column;

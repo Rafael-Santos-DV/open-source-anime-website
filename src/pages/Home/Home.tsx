@@ -94,7 +94,6 @@ export const Home: React.FC = () => {
           className="container-calendar"
           data={data}
         />
-        {!data && <Loading text="Carregando Animes" />}
         <CardAnimes
           title="Animes"
           className="container-animes"

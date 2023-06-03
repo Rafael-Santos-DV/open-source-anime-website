@@ -39,6 +39,13 @@ export const MainPlay = styled.main`
   flex-direction: column;
   row-gap: 20px;
   padding: 20px;
+
+  > div {
+    color: white;
+    span {
+      color: ${colors.colorBlue};
+    }
+  }
 `;
 
 export const BoxPreOrNext = styled.div`
@@ -63,7 +70,7 @@ export const BoxPreOrNext = styled.div`
 
 export const ContainerVideo = styled.article`
   width: 100%;
-  > video {
+  > div {
     width: 100%;
     max-width: 700px;
   }

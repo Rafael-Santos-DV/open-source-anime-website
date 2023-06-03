@@ -13,7 +13,7 @@ import { Loading } from '../../components/Loading/Loading';
 
 export const InfoAnime: React.FC = () => {
   const { animeId } = useParams<{ animeId: string }>();
-  const data = useUniqueAnime(animeId);
+  const data = useUniqueAnime(animeId as string);
 
   const location = useLocalPath();
 

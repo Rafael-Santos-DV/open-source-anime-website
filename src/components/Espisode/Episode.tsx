@@ -15,6 +15,7 @@ type EpType = {
   episode: number;
   episodes: number;
   rota: string;
+  isPlayer?: boolean;
 };
 
 export const EpisodeComponent: React.FC<EpType> = ({
@@ -23,6 +24,7 @@ export const EpisodeComponent: React.FC<EpType> = ({
   episode,
   episodes,
   rota,
+  isPlayer,
 }) => {
   const text = useRef(null);
 
@@ -49,7 +51,7 @@ export const EpisodeComponent: React.FC<EpType> = ({
   }, []);
   return (
     <ContainerEpisode className="episode">
-      <Link to={rota} className="content">
+      <Link to={rota} className={`content ${isPlayer ? 'isPlayer' : ''}`}>
         <ContentImage>
           <img
             className="poster"
