@@ -32,6 +32,7 @@ export const Play: React.FC = () => {
 
   const useRouter = useNavigate();
 
+  // eslint-disable-next-line
   const location = useLocalPath() as any;
 
   useEffect(() => {

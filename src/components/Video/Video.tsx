@@ -5,7 +5,7 @@ import React, {
   VideoHTMLAttributes,
   useRef,
 } from 'react';
-import { Awaiting, Container, NextVideo, Play, VideoComponent } from './style';
+import { Awaiting, Container, NextVideo, VideoComponent } from './style';
 
 type VideoType = {
   children: ReactNode;
